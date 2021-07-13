@@ -6,6 +6,10 @@ window.addEventListener('load', function() {
   // add a <span> element to your html with id of 'message'
   const message = document.getElementById("message")
 
+  const power = document.getElementById("power")
+
+  power.innerHTML = thermostat.powerSaving
+
    button.addEventListener('click', function() {
     message.innerHTML = thermostat.up();
       })
