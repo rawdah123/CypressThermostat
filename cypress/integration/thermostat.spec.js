@@ -12,4 +12,10 @@ describe('Thermostat home page', () => {
     cy.get("#button").click()
     cy.get("#message").should('contain', '21')
   })
+
+  it('when button clicked then temp decreases by 1 ', () => {
+    cy.visit('/')
+    cy.get("#down").click()
+    cy.get("#message").should('contain', '19')
+  })
 })

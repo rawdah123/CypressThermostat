@@ -9,4 +9,7 @@ window.addEventListener('load', function() {
    button.addEventListener('click', function() {
     message.innerHTML = thermostat.up();
       })
+      down.addEventListener('click', function() {
+        message.innerHTML = thermostat.down();
+})
 })

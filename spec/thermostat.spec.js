@@ -29,7 +29,7 @@ describe('temperature tests', function(){
 
     it('reset', () => {
         const thermostat = new Thermostat();
-        thermostat.down(3); 
+        thermostat.down(3); //17
         thermostat.reset(); 
         expect(thermostat.temperature).toEqual(20);
     })
