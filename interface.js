@@ -11,22 +11,28 @@ window.addEventListener('load', function() {
   const change = document.getElementById("change")
 
   const reset = document.getElementById("reset")
-   power.innerHTML = thermostat.powerSaving;
+
+  const usage = document.getElementById("usage")
+   power.innerHTML = thermostat.onPowerSaving();
   
    button.addEventListener('click', function() {
     message.innerHTML = thermostat.up();
+    usage.innerHTML = thermostat.getUsage();
       })
       down.addEventListener('click', function() {
         message.innerHTML = thermostat.down();
+        usage.innerHTML = thermostat.getUsage();
+        
 })
-
     change.addEventListener('click', function(){
       thermostat.changePowerSaving()
-      power.innerHTML = thermostat.powerSaving;
+      power.innerHTML = thermostat.onPowerSaving();
+      
     })
 
     reset.addEventListener('click', () => {
       message.innerHTML = thermostat.reset(); 
+      usage.innerHTML = thermostat.getUsage();
       
     })
   

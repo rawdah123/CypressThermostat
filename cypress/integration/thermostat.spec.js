@@ -20,17 +20,22 @@ describe('Thermostat home page', () => {
   })
   it('power saving text', () => {
     cy.visit('/')
-    cy.get("#power").should('contain', true)
+    cy.get("#power").should('contain', 'on')
   })
   it('change power saving text', () => {
     cy.visit('/')
     cy.get("#change").click()
-    cy.get("#power").should('contain', false)
+    cy.get("#power").should('contain', 'off')
   })
   it('reset', () => {
     cy.visit('/')
     cy.get("#down").click()
     cy.get("#reset").click()
     cy.get("#message").should('contain', '20')
+  })
+  it('usage', () => {
+    cy.visit('/')
+    cy.get("#reset").click()
+    cy.get("#usage").should('contain', 'medium-usage')
   })
 })

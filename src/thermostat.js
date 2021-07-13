@@ -21,7 +21,14 @@
    changePowerSaving(){
         this.powerSaving = !this.powerSaving
    } 
-    
+    onPowerSaving (){
+        if(this.powerSaving === true){
+            return 'on'
+        }else{
+            return 'off'
+        }
+
+    }
     reset(){
         return this.temperature = 20; 
     }
