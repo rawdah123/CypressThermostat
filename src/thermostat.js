@@ -3,7 +3,7 @@
      this.temperature = 20;
      this.powerSaving = true;
     }
-    up(number){
+    up(number = 1){
         if(number + this.temperature <= this.getMaximumTemperature()){
             return this.temperature += number
         }
@@ -11,7 +11,7 @@
             return 'Maximum temperature is ' +this.getMaximumTemperature()
         }
     }
-    down(number){
+    down(number = 1){
         return this.temperature - number >= 10 ? this.temperature -= number
         : 'Minimum temperature is 10'; 
     }
