@@ -27,4 +27,10 @@ describe('Thermostat home page', () => {
     cy.get("#change").click()
     cy.get("#power").should('contain', false)
   })
+  it('reset', () => {
+    cy.visit('/')
+    cy.get("#down").click()
+    cy.get("#reset").click()
+    cy.get("#message").should('contain', '20')
+  })
 })

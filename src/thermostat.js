@@ -23,7 +23,7 @@
    } 
     
     reset(){
-        this.temperature = 20; 
+        return this.temperature = 20; 
     }
     getUsage(){
         

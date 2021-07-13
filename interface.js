@@ -9,6 +9,8 @@ window.addEventListener('load', function() {
   const power = document.getElementById("power")
 
   const change = document.getElementById("change")
+
+  const reset = document.getElementById("reset")
    power.innerHTML = thermostat.powerSaving;
   
    button.addEventListener('click', function() {
@@ -21,6 +23,11 @@ window.addEventListener('load', function() {
     change.addEventListener('click', function(){
       thermostat.changePowerSaving()
       power.innerHTML = thermostat.powerSaving;
+    })
+
+    reset.addEventListener('click', () => {
+      message.innerHTML = thermostat.reset(); 
+      
     })
   
 })
