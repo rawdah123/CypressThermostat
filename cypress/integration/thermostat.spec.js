@@ -22,4 +22,9 @@ describe('Thermostat home page', () => {
     cy.visit('/')
     cy.get("#power").should('contain', true)
   })
+  it('change power saving text', () => {
+    cy.visit('/')
+    cy.get("#change").click()
+    cy.get("#power").should('contain', false)
+  })
 })

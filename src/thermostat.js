@@ -18,12 +18,10 @@
     getMaximumTemperature(){
         return this.powerSaving ? 25: 32
     }
-    turnPowerSavingOn(){
-        this.powerSaving = true; 
-    }
-    turnPowerSavingOff(){
-        this.powerSaving = false; 
-    }
+   changePowerSaving(){
+        this.powerSaving = !this.powerSaving
+   } 
+    
     reset(){
         this.temperature = 20; 
     }

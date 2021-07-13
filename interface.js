@@ -8,12 +8,19 @@ window.addEventListener('load', function() {
 
   const power = document.getElementById("power")
 
-  power.innerHTML = thermostat.powerSaving
-
+  const change = document.getElementById("change")
+   power.innerHTML = thermostat.powerSaving;
+  
    button.addEventListener('click', function() {
     message.innerHTML = thermostat.up();
       })
       down.addEventListener('click', function() {
         message.innerHTML = thermostat.down();
 })
+
+    change.addEventListener('click', function(){
+      thermostat.changePowerSaving()
+      power.innerHTML = thermostat.powerSaving;
+    })
+  
 })
