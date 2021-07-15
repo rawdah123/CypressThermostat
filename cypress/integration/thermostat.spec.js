@@ -38,4 +38,8 @@ describe('Thermostat home page', () => {
     cy.get("#reset").click()
     cy.get("#usage").should('contain', 'medium-usage')
   })
+
+
+
+  
 })
