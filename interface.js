@@ -27,21 +27,45 @@ window.addEventListener("load", function () {
   // });  
 
 //event listeners go here
-  button.addEventListener("click", function () {
-    message.innerHTML = thermostat.up();
-    usage.innerHTML = thermostat.getUsage();
-  });
-  down.addEventListener("click", function () {
+
+$("#button").on("click", function(){
+  message.innerHTML = thermostat.up();
+  usage.innerHTML = thermostat.getUsage();
+});
+
+  // button.addEventListener("click", function () {
+  //   message.innerHTML = thermostat.up();
+  //   usage.innerHTML = thermostat.getUsage();
+  //  });
+
+
+  $("#down").on("click", function (){
     message.innerHTML = thermostat.down();
-    usage.innerHTML = thermostat.getUsage();
-  });
-  change.addEventListener("click", function () {
+  usage.innerHTML = thermostat.getUsage() 
+ })
+   // down.addEventListener("click", function () {
+  //   message.innerHTML = thermostat.down();
+  //   usage.innerHTML = thermostat.getUsage();
+  // });
+ 
+
+  ("#change").on("click", function(){
     thermostat.changePowerSaving();
     power.innerHTML = thermostat.onPowerSaving();
-  });
+  })
+  // change.addEventListener("click", function () {
+  //   thermostat.changePowerSaving();
+  //   power.innerHTML = thermostat.onPowerSaving();
+  // });
 
-  reset.addEventListener("click", () => {
+  $("#reset").on("click", function(){
     message.innerHTML = thermostat.reset();
     usage.innerHTML = thermostat.getUsage();
-  });
+  })
+
 });
+//   reset.addEventListener("click", () => {
+//     message.innerHTML = thermostat.reset();
+//     usage.innerHTML = thermostat.getUsage();
+//   });
+//});

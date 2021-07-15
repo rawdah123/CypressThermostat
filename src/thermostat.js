@@ -8,7 +8,7 @@
             return this.temperature += number
         }
         else{
-            return 'Maximum temperature is ' +this.getMaximumTemperature()
+            return 'Maximum temperature is ' + this.getMaximumTemperature()
         }
     }
     down(number = 1){
